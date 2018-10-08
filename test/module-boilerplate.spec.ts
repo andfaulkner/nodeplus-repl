@@ -10,17 +10,20 @@ import fs from 'fs';
 import path from 'path';
 
 /*********************************** IMPORT FILES TO BE TESTED ************************************/
-import {nodeModuleBoilerplateExport} from '../index';
+import {nodeModuleBoilerplate} from '../index';
 
 /********************************************* TESTS **********************************************/
-describe('nodeModuleBoilerplateExport', function() {
-    it('exists', function() {
-        expect(nodeModuleBoilerplateExport).to.exist;
+describe(`nodeModuleBoilerplate`, function() {
+    it(`exists`, function() {
+        expect(nodeModuleBoilerplate).to.exist;
     });
-    it('is the thing', function() {
-        expect(nodeModuleBoilerplateExport).to.be.an('object');
+    it(`is an object`, function() {
+        expect(nodeModuleBoilerplate).to.be.an(`object`);
     });
-    it('#nodeModuleBoilerplateExport.nodeModuleBoilerplatePlaceholderFn throws if run', function() {
-        expect(nodeModuleBoilerplateExport.nodeModuleBoilerplatePlaceholderFn).to.throw(Error);
+    it(`has property called placeholder, containing string 'placeholder'`, function() {
+        expect(nodeModuleBoilerplate.placeholder).to.eql(`placeholder`);
+    });
+    it(`nodeModuleBoilerplate.placeholderFn throws if run`, function() {
+        expect(nodeModuleBoilerplate.placeholderFn).to.throw(Error);
     });
 });

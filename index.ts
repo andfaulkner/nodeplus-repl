@@ -2,18 +2,19 @@
 import isNode from 'detect-node';
 import {isVerbose} from 'env-var-helpers';
 
-/************************************* IMPORT PROJECT MODULES *************************************/
-
 /**************************************** TYPE DEFINITIONS ****************************************/
-export interface INodeModuleBoilerplate {
-    nodeModuleBoilerplatePlaceholder: string;
-    nodeModuleBoilerplatePlaceholderFn: (test: string) => never;
+export interface NodeModuleBoilerplate {
+    placeholder: string;
+    placeholderFn: (test: string) => never;
 }
 
-const nodeModuleBoilerplateExport: INodeModuleBoilerplate = {
-    nodeModuleBoilerplatePlaceholder: 'placeholder',
-    nodeModuleBoilerplatePlaceholderFn: (test: string) => { throw new Error('Boilerplate fn called') },
-}
-
-export { nodeModuleBoilerplateExport }
-
+/********************************************* EXPORT *********************************************/
+/**
+ * Export from module
+ */
+export const nodeModuleBoilerplate: NodeModuleBoilerplate = {
+    placeholder: `placeholder`,
+    placeholderFn: (test: string) => {
+        throw new Error(`Boilerplate fn called`);
+    },
+};
