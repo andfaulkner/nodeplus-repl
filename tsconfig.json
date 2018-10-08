@@ -1,31 +1,50 @@
 {
-    "version": "2.1.4",
+    "version": "3.1.1",
+
     "compilerOptions": {
         "module": "commonjs",
-        "noImplicitAny": false,
-        "removeComments": false,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "strictNullChecks": false,
-        "outDir": "lib/",
-        "declaration": true,
-
-        "target": "ES6",
         "moduleResolution": "node",
+
+        "target": "es5",
+        "outDir": "./build",
+        "jsx": "react",
+
         "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+
+        "noUnusedLocals": true,
+
         "removeComments": false,
-        "jsx": "preserve",
-        "pretty": true
+        "preserveConstEnums": false,
+
+        "sourceMap": true,
+        "allowJs": true,
+        "pretty": true,
+
+        "noImplicitAny": false,
+        "skipLibCheck": true,
+        "strictNullChecks": false,
+
+        "lib": ["ES2018"],
+        "typeRoots": [
+            "./typings",
+            "./node_modules/@types"
+        ],
+        "types": []
     },
-    "exclude": [
-        "*.js",
-        "*.json"
-    ],
+
     "include": [
         "./index.ts",
         "./typings/index.d.ts",
-        "./src/*.ts"
+        "./src/*.ts",
+        "./node_modules/@types/**/*.d.ts",
+        "./node_modules/**/*.d.ts"
+    ],
+
+    "exclude": [
+        "*.js",
+        "*.json"
     ]
 }
