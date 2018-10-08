@@ -1,10 +1,8 @@
 /************************************** THIRD-PARTY IMPORTS ***************************************/
-import * as isNode from 'detect-node';
+import isNode from 'detect-node';
+import {isVerbose} from 'env-var-helpers';
 
 /************************************* IMPORT PROJECT MODULES *************************************/
-const colors = (isNode)
-    ? require('colors/safe')
-    : {};
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 export interface INodeModuleBoilerplate {
