@@ -1,65 +1,70 @@
 {
-  "name": "node-typescript-module-boilerplate",
-  "version": "0.0.1",
-  "description": "/***** TODO Stuff and things ******/",
-  "main": "lib/index.js",
-  "typings": "lib/index",
-  "files": [
-    "lib/"
-  ],
-  "scripts": {
-    "prepublish": "npm run test",
-    "compile-ts": "./node_modules/typescript/bin/tsc -p ./",
-    "compile-ts:watch": "./node_modules/typescript/bin/tsc -p ./ --watch",
-    "test": "npm run compile-ts; mocha --opts test/mocha.opts test/",
-    "boilerplate-check": "./script/ensure-fully-implemented.rb",
-    "test:coverage": "nyc npm test",
-    "test:watch": "chokidar ./lib/** ./config/** ./test/** --initial -c \"mocha --opts test/mocha.opts test/\"",
-    "setup": "yarn; git remote remove origin"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andfaulkner/node-typescript-module-boilerplate.git"
-  },
-  "keywords": [
-    "/**** TODO ADD KEYWORDS ****/"
-  ],
-  "author": "Andrew Faulkner <andfaulkner@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andfaulkner/node-typescript-module-boilerplate/issues"
-  },
-  "homepage": "https://github.com/andfaulkner/node-typescript-module-boilerplate#readme",
-  "dependencies": {
-    "app-root-path": "^2.2.1",
-    "detect-node": "^2.0.4",
-    "isomorphic-fetch": "^2.2.1",
-    "jsdom": "^15.1.1",
-    "lodash": "^4.17.15",
-    "mad-utils": "^0.91.0",
-    "moment": "^2.24.0",
-    "shelljs": "^0.8.3"
-  },
-  "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/jsdom": "^12.2.4",
-    "@types/lodash": "^4.14.136",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^10.12.18",
-    "chai": "^4.2.0",
-    "chokidar": "^3.0.2",
-    "env-var-helpers": "^5.2.0",
-    "mad-logs": "^11.4.0",
-    "mocha": "^6.2.0",
-    "nodemon": "^1.19.1",
-    "prettier": "^1.18.2",
-    "sinon": "^7.3.2",
-    "snyk": "^1.202.0",
-    "ts-node": "^8.3.0",
-    "tslint": "^5.18.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "tslint-microsoft-contrib": "^6.2.0",
-    "typescript": "^3.3.3"
-  },
-  "snyk": true
+    "name": "nodeplus-repl",
+    "version": "0.0.1",
+    "description": "Improved REPL, including limited project awareness",
+    "main": "lib/index.js",
+    "typings": "lib/index",
+    "files": [
+        "lib/"
+    ],
+    "scripts": {
+        "prepublish": "npm run test",
+        "compile-ts": "./node_modules/typescript/bin/tsc -p ./",
+        "compile-ts-watch": "./node_modules/typescript/bin/tsc -p ./ --watch",
+        "test": "npm run compile-ts; mocha --opts test/mocha.opts test/",
+        "boilerplate-check": "./script/ensure-fully-implemented.rb",
+        "test-coverage": "nyc npm test",
+        "test-watch": "chokidar ./lib/** ./config/** ./test/** --initial -c \"mocha --opts test/mocha.opts test/\"",
+        "setup": "npm install; git remote remove origin"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/andfaulkner/nodeplus-repl.git"
+    },
+    "keywords": [
+        "repl",
+        "interactive",
+        "bin",
+        "binary",
+        "read-eval-print-loop",
+        "enhanced-node"
+    ],
+    "author": "Andrew Faulkner <andfaulkner@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/andfaulkner/nodeplus-repl/issues"
+    },
+    "homepage": "https://github.com/andfaulkner/nodeplus-repl#readme",
+    "dependencies": {
+        "app-root-path": "^2.2.1",
+        "detect-node": "^2.0.4",
+        "isomorphic-fetch": "^2.2.1",
+        "jsdom": "^15.1.1",
+        "lodash": "^4.17.15",
+        "mad-utils": "^0.91.0",
+        "moment": "^2.24.0",
+        "shelljs": "^0.8.3"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.1.7",
+        "@types/jsdom": "^12.2.4",
+        "@types/lodash": "^4.14.136",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^10.12.18",
+        "chai": "^4.2.0",
+        "chokidar": "^3.0.2",
+        "env-var-helpers": "^5.2.0",
+        "mad-logs": "^11.4.0",
+        "mocha": "^6.2.0",
+        "nodemon": "^1.19.1",
+        "prettier": "^1.18.2",
+        "sinon": "^7.3.2",
+        "snyk": "^1.202.0",
+        "ts-node": "^8.3.0",
+        "tslint": "^5.18.0",
+        "tslint-eslint-rules": "^5.4.0",
+        "tslint-microsoft-contrib": "^6.2.0",
+        "typescript": "^3.3.3"
+    },
+    "snyk": true
 }
