@@ -55,7 +55,7 @@
         "chokidar": "^3.0.2",
         "env-var-helpers": "^5.2.0",
         "mad-logs": "^11.4.0",
-        "mocha": "^6.2.0",
+        "mocha": "^10.2.0",
         "nodemon": "^1.19.1",
         "prettier": "^1.18.2",
         "sinon": "^7.3.2",
